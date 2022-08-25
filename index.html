@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body class="pb-5">
+
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+      <button class="btn-sm btn-danger border border-bold float-left ml-1 mt-1">
+        Clear Schedule
+      </button>
+    </header>
+
+    <div class="container">
+      <!-- Timeblocks go here -->
+      
+      <!-- 8AM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 border-bottom border-top border-dark pt-0 text-right">
+          <h4 class="d-inline align-text-top">8AM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="8-am" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right text-center">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 9AM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right border-dark pt-0">
+          <h4 class="d-inline align-text-top">9AM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="9-am" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right text-center">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+      
+      <!-- 10AM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top  border-dark pt-0">
+          <h4 class="d-inline align-text-top">10AM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="10-am" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 11AM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-dark pt-0">
+          <h4 class="d-inline align-text-top">11AM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="11-am" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 12PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-dark pt-0">
+          <h4 class="d-inline align-text-top">12PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="12-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 1PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-dark pt-0">
+          <h4 class="d-inline align-text-top">1PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="1-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 2PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top  border-dark pt-0">
+          <h4 class="d-inline align-text-top">2PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="2-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 3PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-dark pt-0">
+          <h4 class="d-inline align-text-top">3PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="3-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 4PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-dark pt-0">
+          <h4 class="d-inline align-text-top">4PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="4-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+
+      <!-- 5PM -->
+      <div class="row">
+        <div class="col-2 d-flex flex-column justify-content-center h-100 text-right  border-top border-bottom border-dark pt-0">
+          <h4 class="d-inline align-text-top">5PM</h4>
+        </div>
+          <div class="col-8 input-group p-0">
+            <textarea id="5-pm" class="form-control bg-secondary text-white rounded-0 pt-3" aria-label="With textarea">No task entered</textarea>
+          </div>
+        <div class="col-2 d-flex flex-column justify-content-center h-100 bg-info text-white rounded-right">
+          <button class="btn-lg bg-info border-0">💾</button>
+        </div>
+      </div>
+    
+      <footer class="fixed-bottom">
+        <p class="d-none btn btn-warning border border-bold float-right mr-5">
+          Saved
+        </p>
+      </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
