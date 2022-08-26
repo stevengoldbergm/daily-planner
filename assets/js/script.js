@@ -66,8 +66,8 @@ function resetContents() {
     console.log("start resetContents()")
     v = 8
     amPm = "-am"
-    console.log(v + amPm);
     localStorage.clear()
+    // console.log(v + amPm);
 
     // Loop starts at 8AM and rolls through to 5PM
     for (var i = 8 ; i < 18; i++) {
@@ -93,8 +93,8 @@ var nowHero = moment().format("dddd, Do of MMMM YYYY")
 // Defined these twice, but the variables are re-defined inside the functions
 // var timeCheck1 = moment("12-AM", "h-A").format ("h-A")
 // var timeCheck2 = now.format("h-A")
-var timeCheck1 = moment(now.format("mm"), "mm");
-var timeCheck2 = moment('00', 'mm')
+var timeCheck1 = moment(textEl[0].id, "h-a")
+var timeCheck2 = moment(now.format("h-a"), "h-a");
 
 // console.log(now.format("hh:mm:ss"))
 // console.log(nowHero)
@@ -107,8 +107,13 @@ function bgTimer() {
     console.log("start bgTimer()")
     v = 8
     amPm = "-am"
+    // Needed to re-define the textEl in here or it broke on loop?
+    textEl = $("#" + v + amPm)
     // console.log(v + amPm);
-
+    // console.log(textEl)
+    timeCheck1 = moment(textEl[0].id, "h-a")
+    // console.log(timeCheck1)
+    timeCheck2 = moment(now.format("h-a"), "h-a");
     // Loop starts at 8AM and rolls through to 5PM
     for (var i = 8 ; i < 19; i++) {
         if (i == 12) {
@@ -154,24 +159,24 @@ function bgTimer() {
     }
 }
 
+var timerCheck1 = moment(now.format("mm"), "mm");
+var timerCheck2 = moment('00', 'mm')
 
 function updateColors() {
     console.log("Start updateColors()")
     now = moment()
-    timeCheck1 = moment(now.format("mm"), "mm");
-    timeCheck2 = moment('00', 'mm')
-
-    // This code pulled values, but that broke the .isSame method for moment().
-    // timeCheck1 = timeCheck1['_i'];
-    // timeCheck2 = timeCheck2['_i'];
+    timerCheck1 = moment(now.format("mm"), "mm");
+    timerCheck2 = moment('00', 'mm')
 
     // console.log(timeCheck1, timeCheck2)
     // console.log(timeCheck1)
-
-    if (moment(timeCheck1).isSame(timeCheck2)) {
-        bgTimer();
-    }
+    
+    // Run bgTimer every hour on the hour. If the rows need to change color, then they change in real time.
+    if (moment(timerCheck1).isSame(timerCheck2)) {
+        bgTimer()
+    };
 }
+
 
 // Check if the time is on the hour every minute. 
 setInterval(updateColors, 60000)
